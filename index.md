@@ -6,6 +6,7 @@ author:
 
 In this policy, I will explain what kind of data my apps collect.
 This applies to the following cases.
+
 - There is a link to this in the web app I manage.
 - This policy is displayed in my app and on its store page.
 
