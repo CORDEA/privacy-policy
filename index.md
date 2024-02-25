@@ -1,4 +1,8 @@
-# Privacy policy
+---
+title: Privacy Policy
+author:
+- Yoshihiro Tanaka
+---
 
 In this policy, I will explain what kind of data my apps collect.
 This applies to the following cases.
