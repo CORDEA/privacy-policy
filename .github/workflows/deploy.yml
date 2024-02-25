@@ -14,4 +14,15 @@ jobs:
       - uses: pandoc/actions/setup@v1
         with:
           version: 2.19
-      - run: pandoc -s -o index.html index.md
+      - run: |
+         pandoc -s -o index.html index.md
+         mv index.html /tmp/
+      - uses: actions/checkout@v4
+        with:
+          ref: pages
+          clean: false
+      - run: |
+          git config user.name 'Yoshihiro Tanaka'
+          git config user.email 'contact@cordea.jp'
+          mv /tmp/index.html ./
+          git add index.html && git commit -m 'update' && git push || true
