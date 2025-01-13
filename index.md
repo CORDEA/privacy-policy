@@ -12,11 +12,12 @@ This applies to the following cases.
 
 ## Collected data
 
-There is no information that I explicitly obtain, including via Crashlytics or Analytics, etc.
+The app may collect crash and diagnostic data.
 
 ## Data to be shared
 
-Same as above, none.
+The app may share data with third parties for the following purposes:
+- To investigate crashes and diagnostic data
 
 ## About this policy
 
