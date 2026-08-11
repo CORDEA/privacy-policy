@@ -15,8 +15,17 @@ jobs:
         with:
           version: 2.19
       - run: |
-         pandoc -s -o index.html index.md
-         mv index.html /tmp/
+          site_dir="$(mktemp -d)"
+          pandoc -s -o "$site_dir/index.html" index.md policies/no-data.md
+
+          find . -mindepth 2 -maxdepth 2 -name index.md -type f -print0 |
+            while IFS= read -r -d '' source; do
+              output="$site_dir/${source%.md}.html"
+              mkdir -p "$(dirname "$output")"
+              pandoc -s -o "$output" "$source" policies/no-data.md
+            done
+
+          mv "$site_dir" /tmp/privacy-policy-site
       - uses: actions/checkout@v4
         with:
           ref: pages
@@ -24,5 +33,6 @@ jobs:
       - run: |
           git config user.name 'Yoshihiro Tanaka'
           git config user.email 'contact@cordea.jp'
-          mv /tmp/index.html ./
-          git add index.html && git commit -m 'update' && git push || true
+          cp -R /tmp/privacy-policy-site/. ./
+          git add -A .
+          git commit -m 'update' && git push || true
