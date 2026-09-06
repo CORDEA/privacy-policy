@@ -30,6 +30,7 @@ combined policy and every current product policy.
 | Voice Clock | `voice-clock/index.md` |
 | Kids Compass | `kids-compass/index.md` |
 | Closet | `closet/index.md` |
+| Symbol Breaker | `symbol-breaker/index.md` |
 
 All current products use the no-data-collection policy. If a product later adds
 analytics or another data service, add another shared policy and map that
