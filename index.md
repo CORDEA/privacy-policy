@@ -12,3 +12,4 @@ This Privacy Policy applies to the following applications:
 - [Kids Compass](https://cordea.jp/privacy-policy/kids-compass/)
 - [Closet](https://cordea.jp/privacy-policy/closet/)
 - [Symbol Breaker](https://cordea.jp/privacy-policy/symbol-breaker/)
+- [Sound Watch](https://cordea.jp/privacy-policy/sound-watch/)
